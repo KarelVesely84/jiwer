@@ -132,6 +132,11 @@ class Compose(object):
         return text
 
 
+class NoTransform(AbstractTransform):
+    def process_string(self, s: str):
+        return s
+
+
 class BaseRemoveTransform(AbstractTransform):
     def __init__(self, tokens_to_remove: Iterable[str], replace_token=""):
         self.tokens_to_remove = tokens_to_remove

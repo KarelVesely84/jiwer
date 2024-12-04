@@ -155,12 +155,13 @@ def process_words(
         reference = [reference]
     if isinstance(hypothesis, str):
         hypothesis = [hypothesis]
-    if any(len(t) == 0 for t in reference):
-        raise ValueError("one or more references are empty strings")
+    #if any(len(t) == 0 for t in reference):
+    #    raise ValueError("one or more references are empty strings")
 
     # pre-process reference and hypothesis by applying transforms
     ref_transformed = _apply_transform(
-        reference, reference_transform, is_reference=True
+        #reference, reference_transform, is_reference=True
+        reference, reference_transform, is_reference=False
     )
     hyp_transformed = _apply_transform(
         hypothesis, hypothesis_transform, is_reference=False
