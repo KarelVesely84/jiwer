@@ -46,6 +46,7 @@ __all__ = [
     "AbstractTransform",
     "Compose",
     "ExpandCommonEnglishContractions",
+    "NoTransform",
     "RemoveEmptyStrings",
     "ReduceToListOfListOfWords",
     "ReduceToListOfListOfChars",
